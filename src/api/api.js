@@ -1,5 +1,5 @@
 
-const BASE_URL = "http://localhost:5009/api"
+const BASE_URL = "https://be-hotelmanagement.onrender.com/api"
 
 // register
 export const registerUser = async (data) => {
