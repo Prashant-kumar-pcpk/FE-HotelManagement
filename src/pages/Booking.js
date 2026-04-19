@@ -138,26 +138,12 @@ export default function Booking({ setScreen, bookingDetails }) {
 
     const [paymentMethod, setPaymentMethod] = useState("");
     const [upiId, setUpiId] = useState("");
-    const [cardDetails, setCardDetails] = useState({
-        cardNumber: "",
-        expiryDate: "",
-        cvv: "",
-        cardholderName: ""
-    });
-
     const [paymentStatus, setPaymentStatus] = useState(null); // null, 'success', 'failed'
     const [bookingId, setBookingId] = useState("");
 
     const handleInputChange = (e) => {
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
-        });
-    };
-
-    const handleCardInputChange = (e) => {
-        setCardDetails({
-            ...cardDetails,
             [e.target.name]: e.target.value
         });
     };
