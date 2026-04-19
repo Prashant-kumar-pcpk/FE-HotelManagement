@@ -32,6 +32,19 @@ export const loginUser = async (data) => {
     return result
 }
 
+// get all users
+export const getAllUsers = async () => {
+    const res = await fetch(`${BASE_URL}/users`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    });
+
+    const result = await res.json();
+    return result;
+}
+
 // contacts
 export const contactUser = async (data) =>{
 
